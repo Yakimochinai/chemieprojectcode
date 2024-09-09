@@ -16,7 +16,6 @@ release = '1.0'
 
 # Extensions
 extensions = [
-    'sphinx.ext.autodoc',      # 自动生成文档（如果需要）
     'sphinx.ext.napoleon',     # 支持 Google 和 NumPy 风格 docstring
     'sphinx.ext.viewcode',     # 查看代码链接
 ]
@@ -31,7 +30,7 @@ master_doc = 'index'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'  # Read the Docs 主题
-# html_static_path = ['_static']
+# html_static_path = ['_static']  # 如果不需要静态文件，可以注释掉
 
 # -- Napoleon settings (for Google/NumPy style docstrings) -------------------
 napoleon_google_docstring = True
