@@ -16,19 +16,21 @@ release = '1.0'
 
 # Extensions
 extensions = [
-    'sphinx.ext.autodoc',      # 自动生成文档
+    'sphinx.ext.autodoc',      # 自动生成文档（如果需要）
     'sphinx.ext.napoleon',     # 支持 Google 和 NumPy 风格 docstring
-    'sphinx.ext.viewcode',     # 添加源码查看链接
+    'sphinx.ext.viewcode',     # 查看代码链接
 ]
 
 templates_path = ['_templates']
 exclude_patterns = []
 
+# 设置主文档文件为 index.rst
+master_doc = 'index'
+
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# 使用 Read the Docs 主题
-html_theme = 'sphinx_rtd_theme'  # 修改为 Read the Docs 默认主题
+html_theme = 'sphinx_rtd_theme'  # Read the Docs 主题
 html_static_path = ['_static']
 
 # -- Napoleon settings (for Google/NumPy style docstrings) -------------------
