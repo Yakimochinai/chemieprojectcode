@@ -1,5 +1,2 @@
 sphinx>=5.0
-sphinx-rtd-theme>=1.0  # Read the Docs 默认主题
-sphinx-autodoc  # 自动生成 API 文档的扩展
-sphinx.ext.napoleon  # 支持 Google 和 NumPy 风格 docstring
-sphinx.ext.viewcode  # 查看源码扩展
+sphinx-rtd-theme>=1.0
