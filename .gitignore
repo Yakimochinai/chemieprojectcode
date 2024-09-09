@@ -1,0 +1,7 @@
+\dist
+\gress*
+\build
+\__pycache__*
+\docs*
+
+.DS_Store

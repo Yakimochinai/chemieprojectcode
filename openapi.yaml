@@ -1,0 +1,92 @@
+openapi: 3.0.0
+info:
+  description: ChemInformatics EDU API
+  version: v0.8
+  title: ChemInformatics EDU API
+  contact:
+    email: thorsten.gressling@hu-berlin.com
+  license:
+    name: MIT
+    url: https://opensource.org/licenses/MIT
+servers:
+  - description: Test
+    url: http://gressling.net/v2
+security:
+  - ApiKeyAuth: []
+tags:
+  - name: production (PROD)
+    description: Deployed API
+  - name: development (DEV)
+    description: Operations available to developers
+paths:
+  /api.php:
+    get:
+      tags:
+        - development (DEV)
+      summary: api.php - Retrieves secured data
+      operationId: getSecuredData
+      description: Retrieves secured data available in the system, requires API key for access.
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Successfully retrieved data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      info:
+                        type: string
+        '401':
+          description: Unauthorized access
+  /A1/A1.php:
+    get:
+      tags:
+        - production (PROD)
+        - development (DEV)
+      summary: api/chemicals - Retrieves chemical data
+      operationId: getChemicalData
+      description: Retrieves chemical data available in the system, requires API key for access.
+      security:
+        - ApiKeyAuth: []
+      responses:
+        '200':
+          description: Successfully retrieved chemical data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        Number:
+                          type: string
+                        Workflow_ID:
+                          type: string
+                        CreateDate:
+                          type: string
+                        Cost:
+                          type: string
+                        Purpose:
+                          type: string
+                        FKEY_USER:
+                          type: string            
+        '401':
+          description: Unauthorized access
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: query
+      name: apiKey
