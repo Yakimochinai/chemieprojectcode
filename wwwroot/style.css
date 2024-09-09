@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; Remove or comment out this line */
+    min-height: 100vh; /* Use min-height instead */
+    display: block; /* Change display to block */
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    margin: auto; /* Center the container */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.title {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.links a {
+    display: block;
+    margin: 10px 0;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.php-test {
+    background-color: black;
+    color: rgb(131, 254, 0);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    white-space: pre-wrap; /* To maintain spacing and formatting of text */
+    margin-top: 22px;
+}
+
+/* Add before and after pseudo-elements for .php-test */
+.php-test::before {
+    content: "$ ";
+    color: rgb(131, 254, 0);
+}
+
+.php-test::after {
+    content: " >";
+    color: rgb(131, 254, 0);
+}
+
+.terminal {
+    background-color: black;
+    color: green;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: pre-wrap; /* To maintain spacing and formatting of text */
+}
+
+/* Optional: Add some styling for a more authentic terminal look */
+.terminal::before {
+    content: "$ ";
+    color: green;
+}
+
+/* If you want to differentiate input from output, you could add a class for input */
+.terminal-input::before {
+    content: "user@terminal:~$ ";
+    color: lightgreen;
+}
+
+.license {
+    margin-top: 20px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 22px); /* Adjust width, accounting for padding and borders */
+    padding: 10px;
+    margin-bottom: 20px; /* Space between the inputs */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+}
