@@ -31,7 +31,7 @@ master_doc = 'index'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_rtd_theme'  # Read the Docs 主题
-html_static_path = ['_static']
+# html_static_path = ['_static']
 
 # -- Napoleon settings (for Google/NumPy style docstrings) -------------------
 napoleon_google_docstring = True
